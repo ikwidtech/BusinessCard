@@ -1,8 +1,13 @@
 :root{
   --bg0:#070a14;
   --bg1:#0b1020;
+  --card:#0e1630cc;
+  --card2:#0e1630;
   --text:#eaf0ff;
   --muted:#a9b4d6;
+  --line:#223058;
+  --accent:#61dafb;
+  --accent2:#a78bfa;
   --shadow: 0 20px 60px rgba(0,0,0,.45);
   --radius: 20px;
 }
@@ -63,6 +68,7 @@ body{
   filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
 }
 
+.brandText{ min-width:0; }
 .company{
   margin:0;
   font-size: clamp(28px, 4vw, 40px);
@@ -78,6 +84,7 @@ body{
 }
 
 .rule{
+  position:relative;
   height:1px;
   border:0;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
@@ -85,6 +92,7 @@ body{
 }
 
 .identity{
+  position:relative;
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
@@ -97,6 +105,7 @@ body{
   font-size: 18px;
   letter-spacing:.2px;
 }
+
 .person .title{
   margin-top:4px;
   color:var(--muted);
@@ -112,11 +121,13 @@ body{
   background: rgba(14,22,48,.55);
   transition: transform .15s ease, border-color .15s ease, background .15s ease;
 }
+
 .phone:hover{
   transform: translateY(-1px);
   border-color: rgba(97,218,251,.35);
   background: rgba(14,22,48,.70);
 }
+
 .phone:focus-visible{
   outline: 3px solid rgba(97,218,251,.35);
   outline-offset: 2px;
@@ -128,6 +139,7 @@ body{
   color:var(--muted);
   letter-spacing:.25px;
 }
+
 .phoneNumber{
   display:block;
   font-size:16px;
@@ -137,11 +149,13 @@ body{
 }
 
 .meta{
+  position:relative;
   display:flex;
   gap:8px;
   flex-wrap:wrap;
   margin-top: 16px;
 }
+
 .pill{
   font-size: 12px;
   color: rgba(234,240,255,.92);
