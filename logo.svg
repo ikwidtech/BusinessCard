@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="ikwidtech logo">
+  <defs>
+    <linearGradient id="g" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#61DAFB"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 .45 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <rect x="8" y="8" width="48" height="48" rx="14" fill="rgba(14,22,48,0.55)" stroke="url(#g)" stroke-width="2"/>
+    <path d="M20 34c5-11 19-11 24 0" fill="none" stroke="url(#g)" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M22 26h20" stroke="rgba(234,240,255,0.55)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="22" cy="26" r="2.2" fill="#61DAFB"/>
+    <circle cx="42" cy="26" r="2.2" fill="#A78BFA"/>
+  </g>
+
+  <text x="32" y="58" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+        font-size="10.5" letter-spacing=".6"
+        fill="rgba(234,240,255,0.85)">ikwidtech</text>
+</svg>
